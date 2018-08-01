@@ -3,7 +3,7 @@
 '''
 Given a string, write a function that returns a "cleaned" string where adjacent chars 
 that are the same have been reduced to a single char.
-So "yyzzza" yields "yza".
+e.g. stringClean("yyzzza") returns "yza"
 '''
 def stringClean(iStr):
 	output = ''
@@ -19,6 +19,11 @@ def testStringClean():
 	assert "abcd" == stringClean("abbbcdd")
 	assert "Helo" == stringClean("Hello")
 
+'''
+Given a string, return the length of the largest "block" in the string. 
+A block is a run of adjacent chars that are the same. 
+e.g. maxBlock("hoopla") returns 2
+'''
 def maxBlock(iStr):
 	finalMax = 0
 	curMax = 0
@@ -37,6 +42,10 @@ def testMaxBlock():
 	assert 3 == maxBlock("abbCCCddBBBxx")
 	assert 0 == maxBlock("")
 
+'''
+Given a string, re-arrange the letters in acscending order.
+e.g. reorderBlock("bbAAccAadF") returns "AAAabbccdF"
+'''
 def reorderBlock(iStr):
 	chars = list(iStr)
 	chars = sorted(chars, key=lambda s: s.lower())
